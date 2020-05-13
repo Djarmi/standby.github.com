@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<HEAD><TITLE>Perimeter Box</TITLE></HEAD>
+<BODY>
+<FORM>
+	Introdusca el ancho del cuadrado:
+	<INPUT TYPE="TEXT" ID="ancho"><BR>
+	Introdusca la altura del cuadrado:
+	<INPUT TYPE="TEXT" ID="alto"><BR>
+</Form>
+
+<BUTTON ONCLICK="retrieveVal();">Calcular Area</BUTTON>
+<BUTTON ONCLICK="retrieveVal2();">Calcular Perimetro</BUTTON>
+<H2 ID="demo">
+
+<H2 ID="demo2">
+
+<SCRIPT>
+	var x;
+	var y;
+	
+	function retrieveVal(){
+	x = document.getElementById("ancho").value;
+	y = document.getElementById("alto").value;
+
+	document.getElementById("demo").innerHTML = "El area del cuadrado es: " + areaBox(x,y);
+	}
+	
+	function areaBox(x,y){
+	var area = x*y;
+	return area;
+	}
+
+
+function retrieveVal2(){
+	x = document.getElementById("ancho").value;
+	y = document.getElementById("alto").value;
+
+	document.getElementById("demo2").innerHTML = "El perimetro del cuadrado es: " + perimeterBox(x,y);
+	}
+	
+	function perimeterBox(x,y){
+	var perimeter = 2*x + 2*y;
+	return perimeter;
+	}
+
+	
+</SCRIPT>
+
+
+</H2>
+</H2>
+</BODY>
+</HTML>
